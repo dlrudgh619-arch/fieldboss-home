@@ -140,6 +140,30 @@ header.solid .nav-btn:hover{background:#000}
 .steps b{display:block;font-size:18px;font-weight:700;letter-spacing:-.03em;margin-top:10px}
 .steps p{color:var(--gray);font-size:14.5px;margin-top:8px;letter-spacing:-.02em;line-height:1.65;word-break:keep-all}
 
+/* ───────── 요금 ───────── */
+.beta-banner{margin-top:clamp(40px,5vw,56px);background:var(--ink);color:#fff;border-radius:20px;padding:clamp(28px,3.4vw,40px) clamp(26px,3.4vw,44px);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.beta-banner .bb-l{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.beta-banner .pill{background:var(--blue);color:#fff;font-size:13px;font-weight:700;letter-spacing:-.01em;padding:8px 14px;border-radius:999px;white-space:nowrap}
+.beta-banner b{font-size:clamp(18px,2.1vw,25px);font-weight:700;letter-spacing:-.04em;word-break:keep-all}
+.beta-banner p{color:rgba(255,255,255,.62);font-size:14.5px;letter-spacing:-.02em;margin-top:6px;word-break:keep-all}
+
+.price-cards{margin-top:clamp(24px,2.6vw,32px);display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.2vw,26px)}
+.pcard{border:1px solid var(--line);border-radius:20px;padding:clamp(28px,2.6vw,36px) clamp(24px,2.2vw,30px);background:#fff;display:flex;flex-direction:column}
+.pcard.hot{background:var(--bg2);border-color:var(--ink);border-width:1.5px;position:relative}
+.pcard .tag{font-size:12.5px;font-weight:700;color:var(--gray);letter-spacing:.01em}
+.pcard.hot .tag{color:var(--blue)}
+.pcard h3{margin-top:8px;font-size:21px}
+.pcard .who{color:var(--gray);font-size:14px;margin-top:5px;letter-spacing:-.02em}
+.pcard .amt{margin-top:26px;padding-top:24px;border-top:1px solid var(--line);display:flex;align-items:baseline;gap:5px;flex-wrap:wrap}
+.pcard .amt b{font-size:clamp(28px,2.9vw,34px);font-weight:700;letter-spacing:-.045em;font-variant-numeric:tabular-nums}
+.pcard .amt span{color:var(--gray);font-size:15px;font-weight:600}
+.pcard .vat{color:var(--gray);font-size:13px;margin-top:8px;letter-spacing:-.02em}
+.pcard ul{margin-top:24px;margin-bottom:28px}
+.pcard li{list-style:none;display:flex;gap:9px;align-items:flex-start;color:var(--ink2);font-size:14.5px;letter-spacing:-.02em;padding:5px 0;word-break:keep-all}
+.pcard li::before{content:'';flex-shrink:0;width:14px;height:8px;margin-top:6px;border-left:1.8px solid var(--blue);border-bottom:1.8px solid var(--blue);transform:rotate(-45deg)}
+.pcard .btn{margin-top:auto;width:100%}
+.price-note{margin-top:clamp(28px,3vw,36px);color:var(--gray);font-size:13.5px;line-height:1.9;letter-spacing:-.02em;word-break:keep-all}
+
 /* ───────── FAQ ───────── */
 .faq{max-width:820px;margin:clamp(44px,6vw,68px) auto 0}
 .faq details{border-top:1px solid var(--line)}
@@ -206,6 +230,9 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
   .shot-notes div{padding:20px 0}
   .story-pts{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr;gap:28px 20px}
+  .price-cards{grid-template-columns:1fr}
+  .beta-banner{flex-direction:column;align-items:flex-start}
+  .beta-banner .btn{width:100%}
   .f-top{grid-template-columns:1fr 1fr}
   .btn{width:100%;padding:16px 20px}
   .cta-btns{flex-direction:column}
@@ -217,7 +244,7 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
 <header id="hdr"><div class="wrap nav">
   <div class="logo"><img src="img/logo.png" alt="현장대장 로고"><b>현장대장</b></div>
   <nav class="nav-links">
-    <a href="#features">기능</a><a href="#screens">화면</a><a href="#story">이야기</a><a href="#faq">FAQ</a><a href="#beta">문의</a>
+    <a href="#features">기능</a><a href="#screens">화면</a><a href="#story">이야기</a><a href="#pricing">요금</a><a href="#faq">FAQ</a><a href="#beta">문의</a>
   </nav>
   <div class="nav-right">
     <a class="login" href="https://hyunjang-daejang.pages.dev">로그인</a>
@@ -372,8 +399,78 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
   </div>
 </section>
 
+<!-- ───────── 요금 ───────── -->
+<section id="pricing">
+  <div class="wrap">
+    <p class="eyebrow rv">요금</p>
+    <h2 class="rv">지금은 베타 기간,<br>전액 무료로 쓰실 수 있습니다.</h2>
+
+    <div class="beta-banner rv">
+      <div class="bb-l">
+        <span class="pill">BETA</span>
+        <div>
+          <b>베타 참여 업체는 기간 내 이용료가 없습니다</b>
+          <p>모든 기능을 그대로 쓰시고, 불편한 점은 알려주세요. 카드 등록도 필요 없습니다.</p>
+        </div>
+      </div>
+      <a class="btn btn-blue" href="#beta">무료 베타 신청</a>
+    </div>
+
+    <div class="price-cards">
+      <div class="pcard rv">
+        <span class="tag">SMALL</span>
+        <h3>소규모</h3>
+        <p class="who">직원 1~3인</p>
+        <div class="amt"><b>55,000</b><span>원 / 월</span></div>
+        <p class="vat">부가세 포함</p>
+        <ul>
+          <li>현장 관리 · 사진 · 도면</li>
+          <li>견적서 작성 · PDF 발행</li>
+          <li>일정 · 근태 관리</li>
+        </ul>
+        <a class="btn btn-line" href="#beta">문의하기</a>
+      </div>
+
+      <div class="pcard hot rv">
+        <span class="tag">가장 많이 쓰는 플랜</span>
+        <h3>기본</h3>
+        <p class="who">직원 4~10인</p>
+        <div class="amt"><b>165,000</b><span>원 / 월</span></div>
+        <p class="vat">부가세 포함</p>
+        <ul>
+          <li>소규모 플랜의 모든 기능</li>
+          <li>자재 · 원가 · 순이익 정산</li>
+          <li>미수금 관리 · 경비 정산</li>
+          <li>AI 영수증 인식</li>
+        </ul>
+        <a class="btn btn-dark" href="#beta">무료 베타 신청</a>
+      </div>
+
+      <div class="pcard rv">
+        <span class="tag">LARGE</span>
+        <h3>대형</h3>
+        <p class="who">직원 11인 이상</p>
+        <div class="amt"><b>별도 문의</b></div>
+        <p class="vat">업체 규모에 맞춰 안내드립니다</p>
+        <ul>
+          <li>기본 플랜의 모든 기능</li>
+          <li>초기 세팅 · 단가표 입력 지원</li>
+          <li>사용 교육 지원</li>
+        </ul>
+        <a class="btn btn-line" href="tel:010-9436-8611">상담 요청</a>
+      </div>
+    </div>
+
+    <p class="price-note rv">
+      · 표시 금액은 모두 <b>부가세 포함</b> 가격입니다.<br>
+      · 베타 기간에는 플랜과 관계없이 이용료가 발생하지 않으며, 정식 출시 전 미리 안내드립니다.<br>
+      · 직원 수는 현장대장에 등록된 계정 수 기준입니다.
+    </p>
+  </div>
+</section>
+
 <!-- ───────── FAQ ───────── -->
-<section id="faq">
+<section id="faq" style="background:var(--bg2)">
   <div class="wrap">
     <h2 class="rv center">궁금한 점이 있으신가요?</h2>
     <div class="faq">
@@ -385,6 +482,10 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
         <div class="a">전기업체마다 견적 방식이 다르기 때문에, 초기 세팅 과정에서 기본 양식과 항목을 맞춰가는 방향을 준비하고 있습니다.</div></details>
       <details class="rv"><summary>직원들이 잘 사용할까요?</summary>
         <div class="a">복잡한 프로그램은 오래 쓰기 어렵습니다. 그래서 현장 담당자는 사진 업로드·자재 입력·메모처럼 꼭 필요한 기능부터 쉽게 쓸 수 있게 만들고 있습니다.</div></details>
+      <details class="rv"><summary>베타 기간이 끝나면 바로 요금이 청구되나요?</summary>
+        <div class="a">아닙니다. 베타 기간에는 이용료가 발생하지 않으며, 정식 출시 전에 미리 안내드립니다. 안내를 받으신 뒤 계속 사용할지 결정하시면 됩니다.</div></details>
+      <details class="rv"><summary>직원이 늘거나 줄면 요금은 어떻게 되나요?</summary>
+        <div class="a">현장대장에 등록된 계정 수를 기준으로 플랜이 정해집니다. 직원 수가 바뀌면 해당 구간의 플랜으로 조정해 드립니다.</div></details>
       <details class="rv"><summary>모바일과 PC에서 같이 쓸 수 있나요?</summary>
         <div class="a">네. 같은 계정으로 모바일 앱과 PC 화면에서 함께 사용할 수 있고, 입력한 내용은 실시간으로 공유됩니다.</div></details>
     </div>
@@ -413,7 +514,7 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
         <p>전기업체에 특화된 현장·회사관리 플랫폼. 카톡·엑셀에 흩어진 기록을 한곳으로.</p>
       </div>
       <div class="f-col"><b>제품</b>
-        <a href="#features">기능</a><a href="#screens">화면</a><a href="#story">이야기</a></div>
+        <a href="#features">기능</a><a href="#screens">화면</a><a href="#story">이야기</a><a href="#pricing">요금</a></div>
       <div class="f-col"><b>고객지원</b>
         <a href="#faq">자주 묻는 질문</a><a href="#beta">베타 문의</a><a href="mailto:doalab@naver.com">이메일 문의</a></div>
       <div class="f-col"><b>정책</b>
