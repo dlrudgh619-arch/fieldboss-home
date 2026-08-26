@@ -147,7 +147,7 @@ header.solid .nav-btn:hover{background:#000}
 .beta-banner b{font-size:clamp(18px,2.1vw,25px);font-weight:700;letter-spacing:-.04em;word-break:keep-all}
 .beta-banner p{color:rgba(255,255,255,.62);font-size:14.5px;letter-spacing:-.02em;margin-top:6px;word-break:keep-all}
 
-.price-cards{margin-top:clamp(24px,2.6vw,32px);display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.2vw,26px)}
+.price-cards{margin-top:clamp(24px,2.6vw,32px);display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2.2vw,26px);max-width:860px;margin-left:auto;margin-right:auto}
 .pcard{border:1px solid var(--line);border-radius:20px;padding:clamp(28px,2.6vw,36px) clamp(24px,2.2vw,30px);background:#fff;display:flex;flex-direction:column}
 .pcard.hot{background:var(--bg2);border-color:var(--ink);border-width:1.5px;position:relative}
 .pcard .tag{font-size:12.5px;font-weight:700;color:var(--gray);letter-spacing:.01em}
@@ -417,28 +417,16 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
     </div>
 
     <div class="price-cards">
-      <div class="pcard rv">
-        <span class="tag">SMALL</span>
-        <h3>소규모</h3>
-        <p class="who">직원 1~3인</p>
-        <div class="amt"><b>55,000</b><span>원 / 월</span></div>
+      <div class="pcard hot rv">
+        <span class="tag">기본 플랜</span>
+        <h3>기본</h3>
+        <p class="who">직원 10인 이하</p>
+        <div class="amt"><b>165,000</b><span>원 / 월</span></div>
         <p class="vat">부가세 포함</p>
         <ul>
           <li>현장 관리 · 사진 · 도면</li>
           <li>견적서 작성 · PDF 발행</li>
           <li>일정 · 근태 관리</li>
-        </ul>
-        <a class="btn btn-line" href="#beta">문의하기</a>
-      </div>
-
-      <div class="pcard hot rv">
-        <span class="tag">가장 많이 쓰는 플랜</span>
-        <h3>기본</h3>
-        <p class="who">직원 4~10인</p>
-        <div class="amt"><b>165,000</b><span>원 / 월</span></div>
-        <p class="vat">부가세 포함</p>
-        <ul>
-          <li>소규모 플랜의 모든 기능</li>
           <li>자재 · 원가 · 순이익 정산</li>
           <li>미수금 관리 · 경비 정산</li>
           <li>AI 영수증 인식</li>
@@ -447,7 +435,7 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
       </div>
 
       <div class="pcard rv">
-        <span class="tag">LARGE</span>
+        <span class="tag">대형 업체</span>
         <h3>대형</h3>
         <p class="who">직원 11인 이상</p>
         <div class="amt"><b>별도 문의</b></div>
