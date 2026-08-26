@@ -113,8 +113,8 @@ header.solid .nav-btn:hover{background:#000}
 
 /* ───────── 3열 카드 ───────── */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,30px)}
-.card .tile{aspect-ratio:4/3;border-radius:20px;display:grid;place-items:center;position:relative;overflow:hidden}
-.card .tile svg{width:74px;height:74px;stroke:rgba(25,31,40,.68);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.card .tile{aspect-ratio:4/3;border-radius:20px;position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.card .tile img{width:66%;border-radius:12px 12px 0 0;box-shadow:0 18px 40px rgba(20,30,55,.22),0 2px 6px rgba(20,30,55,.10);object-fit:cover;object-position:top;max-height:82%}
 .t1{background:linear-gradient(140deg,#E8F0FE 0%,#F4F1FF 100%)}
 .t2{background:linear-gradient(140deg,#FFF1E9 0%,#FDECF3 100%)}
 .t3{background:linear-gradient(140deg,#E7F6F1 0%,#EDF4FF 100%)}
@@ -366,19 +366,19 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
   <div class="wrap">
     <div class="cards">
       <div class="card rv">
-        <div class="tile t1"><svg viewBox="0 0 48 48"><rect x="7" y="10" width="34" height="31" rx="4"/><path d="M7 19h34M16 6v8M32 6v8"/><circle cx="17" cy="28" r="2.2"/><circle cx="31" cy="34" r="2.2"/></svg></div>
+        <div class="tile t1"><img src="img/card-schedule.png" alt="현장대장 일정 달력 화면"></div>
         <h3>일정 · 근태</h3>
         <p>현장 배정, 직원 생일·법정공휴일 자동 표시. 배정과 실제 출근을 대조합니다.</p>
       </div>
       <div class="card rv">
-        <div class="tile t2"><svg viewBox="0 0 48 48"><path d="M9 16.5 24 8l15 8.5v15L24 40 9 31.5z"/><path d="M9 16.5 24 25l15-8.5M24 25v15"/></svg></div>
+        <div class="tile t2"><img src="img/card-mats.png" alt="현장대장 사용자재 관리 화면"></div>
         <h3>자재 · 정산</h3>
         <p>실사용 자재를 기록하면 매출–원가=순이익까지. 현장별 수익이 숫자로 남습니다.</p>
       </div>
       <div class="card rv">
-        <div class="tile t3"><svg viewBox="0 0 48 48"><rect x="7" y="13" width="34" height="24" rx="4"/><path d="M7 21h34M13 30h8"/></svg></div>
-        <h3>경비 정산</h3>
-        <p>직원이 본인 카드로 쓴 현장 경비를 등록하면, 대표님이 한 번에 모아 정산합니다.</p>
+        <div class="tile t3"><img src="img/card-report.png" alt="현장대장 미수금 리포트 화면"></div>
+        <h3>미수금 확인</h3>
+        <p>이번 달 수금, 총 미수금, 지연된 건까지 한 화면에서 숫자로 확인합니다.</p>
       </div>
     </div>
   </div>
@@ -422,7 +422,7 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
   <div class="wrap">
     <h2 class="rv">시작은 이렇게 간단합니다</h2>
     <div class="steps">
-      <div class="rv"><span class="n">STEP 1</span><b>현장 개설</b><p>새 현장을 만들고 기본 정보를 입력해요.</p></div>
+      <div class="rv"><span class="n">STEP 1</span><b>회사 개설</b><p>새 회사를 등록하고 기본 정보를 입력해요.</p></div>
       <div class="rv"><span class="n">STEP 2</span><b>팀원 초대</b><p>초대코드로 직원을 부르고 역할을 정해요.</p></div>
       <div class="rv"><span class="n">STEP 3</span><b>기록 · 관리</b><p>사진·자재·일정·비용을 현장별로 남겨요.</p></div>
       <div class="rv"><span class="n">STEP 4</span><b>정산 · 수금</b><p>수익과 받을 돈을 한눈에 챙겨요.</p></div>
