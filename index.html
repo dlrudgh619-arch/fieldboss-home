@@ -238,15 +238,18 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
   .hero h1{font-size:clamp(27px,7.4vw,40px);line-height:1.24;letter-spacing:-.045em}
   .hero h1 span+span{margin-top:.04em}
   .br-m{display:block}
-  /* 모바일: 가로 사진이라 세로로 꽉 채우면 얼굴이 과확대된다.
-     히어로를 낮춰 확대율을 줄이고, 인물을 위쪽에 두어 아래 글자 영역과 겹치지 않게 한다 */
-  .hero{height:auto;min-height:0;max-height:none}
-  .hero-bg img{object-position:63% 16%}
-  .hero-inner{min-height:74svh;padding-top:92px}
-  .hero-bg::after{background:linear-gradient(to bottom,rgba(8,12,18,.46) 0%,rgba(8,12,18,.10) 16%,rgba(8,12,18,.16) 34%,rgba(8,12,18,.72) 62%,rgba(8,12,18,.92) 100%)}
-  .hero-inner{padding-bottom:60px}
+  /* 모바일: 사진 위에 글씨를 얹으면 얼굴을 가린다.
+     사진을 위, 글씨를 그 아래로 분리해 얼굴이 온전히 보이게 한다 */
+  .hero{height:auto;min-height:0;max-height:none;background:#fff;display:block;padding:0}
+  .hero-bg{position:relative;inset:auto;width:100%;aspect-ratio:4/5}
+  .hero-bg img{object-position:62% 22%}
+  .hero-bg::after{background:linear-gradient(to bottom,rgba(8,12,18,.46) 0%,rgba(8,12,18,.10) 18%,rgba(8,12,18,0) 42%,rgba(8,12,18,0) 100%)}
+  .hero-inner{position:relative;height:auto;display:block;padding:30px 0 44px}
+  .hero h1{color:var(--ink);text-shadow:none}
+  .hero-sub{margin-top:16px}
+  .hero-sub p{color:var(--ink2);text-shadow:none}
   .hero-sub p br{display:none}
-  .hero-cta{margin-top:24px;flex-direction:column;gap:9px}
+  .hero-cta{margin-top:26px;flex-direction:column;gap:9px}
   .scroll-cue{display:none}
   .feat{grid-template-columns:1fr;gap:44px}
   .feat.rev .feat-txt{order:0}
@@ -297,7 +300,6 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
     </div>
     <div class="hero-cta">
       <a class="btn btn-blue" href="#beta">무료 베타 신청하기</a>
-      <a class="btn btn-glass" href="#screens">실제 화면 보기</a>
     </div>
   </div>
   <div class="scroll-cue"><i></i></div>
@@ -574,8 +576,15 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
 
 <script>
 var hdr=document.getElementById('hdr');
-function onScroll(){ hdr.classList.toggle('solid', window.scrollY > window.innerHeight*0.72); }
-onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+var heroBg=document.querySelector('.hero-bg');
+// 사진 영역을 벗어나면 헤더를 흰 배경으로 바꾼다(모바일은 사진이 짧아 기준이 다르다)
+function onScroll(){
+  var bottom = heroBg ? heroBg.getBoundingClientRect().bottom : window.innerHeight;
+  hdr.classList.toggle('solid', bottom < 76);
+}
+onScroll();
+window.addEventListener('scroll',onScroll,{passive:true});
+window.addEventListener('resize',onScroll);
 
 var io=new IntersectionObserver(function(es){
   es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
