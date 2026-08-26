@@ -241,7 +241,8 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
   /* 모바일: 가로 사진이라 세로로 꽉 채우면 얼굴이 과확대된다.
      히어로를 낮춰 확대율을 줄이고, 인물을 위쪽에 두어 아래 글자 영역과 겹치지 않게 한다 */
   .hero{height:auto;min-height:0;max-height:none}
-  .hero-bg img{object-position:63% 16%}
+  /* 모바일은 폭이 좁아 얼굴과 글씨가 겹친다 → 현장 공간을 보여주고 인물은 오른쪽 가장자리에 */
+  .hero-bg img{object-position:54% 30%}
   .hero-inner{min-height:74svh;padding-top:92px}
   .hero-bg::after{background:linear-gradient(to bottom,rgba(8,12,18,.46) 0%,rgba(8,12,18,.10) 16%,rgba(8,12,18,.16) 34%,rgba(8,12,18,.72) 62%,rgba(8,12,18,.92) 100%)}
   .hero-inner{padding-bottom:60px}
