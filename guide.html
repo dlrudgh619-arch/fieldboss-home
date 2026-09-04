@@ -112,6 +112,29 @@ tr:last-child td{border-bottom:none}
 .n{color:var(--gray)}
 .p{color:var(--blue-d);font-weight:700}
 
+
+/* ── 앱 설치 ── */
+.inst{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.inst-c{border:1px solid var(--line);border-radius:16px;padding:24px 22px;background:#fff}
+.inst-h{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:700;letter-spacing:-.03em}
+.os{width:26px;height:26px;border-radius:8px;background:var(--ink);flex-shrink:0}
+.os.and{background:var(--green)} .os.pc{background:var(--blue)}
+.must{margin-top:14px;font-size:14px;font-weight:700;color:var(--blue-d);
+  background:var(--blue-s);border-radius:9px;padding:9px 13px;display:inline-block}
+.inst-s{margin:16px 0 0 0;padding-left:0;list-style:none;counter-reset:i;display:grid;gap:9px}
+.inst-s li{counter-increment:i;position:relative;padding-left:30px;font-size:15px;color:var(--ink2)}
+.inst-s li::before{content:counter(i);position:absolute;left:0;top:2px;width:21px;height:21px;
+  border-radius:6px;background:var(--bg3);color:var(--ink);font-size:12px;font-weight:800;
+  display:grid;place-items:center}
+.inst-s b{color:var(--ink);font-weight:700}
+.warn{margin-top:14px;font-size:13.5px;color:var(--gray);line-height:1.65;word-break:keep-all}
+.btn-where{margin-top:26px;background:var(--bg2);border:1px solid var(--line);
+  border-radius:16px;padding:22px}
+.bw-t{font-size:15px;font-weight:700;margin-bottom:14px}
+.bw-row{display:grid;gap:14px}
+.bw-k{display:block;font-size:12.5px;font-weight:700;color:var(--gray);margin-bottom:7px}
+.bw-row img{border:1px solid var(--line);border-radius:10px}
+
 /* ── 팁 ── */
 .tip{margin-top:26px;padding:20px 22px;border-radius:14px;background:var(--blue-s);
   border-left:3px solid var(--blue);font-size:15px;color:var(--ink2);word-break:keep-all}
@@ -157,6 +180,7 @@ footer a{color:var(--ink2);font-weight:600;margin-right:16px}
       아래는 실제 앱 화면으로 각각 무엇을 할 수 있는지 정리한 것입니다.</p>
 
     <div class="toc">
+      <a href="#install"><span class="ic">📲</span><span><b>앱 설치하기</b><span>가장 먼저 하실 것</span></span></a>
       <a href="#owner"><span class="ic">👔</span><span><b>대표님 화면</b><span>돈·현장·사람 전부</span></span></a>
       <a href="#member"><span class="ic">🔧</span><span><b>직원 화면</b><span>현장 기록과 내 근태</span></span></a>
       <a href="#perm"><span class="ic">🔐</span><span><b>권한 설정</b><span>누가 뭘 보게 할지</span></span></a>
@@ -164,6 +188,71 @@ footer a{color:var(--ink2);font-weight:600;margin-right:16px}
     </div>
   </div>
 </div>
+
+<!-- ═══════════ 앱 설치 ═══════════ -->
+<section id="install">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="badge o">가장 먼저</span>
+      <h2>앱 설치하기</h2>
+      <p>현장대장은 앱스토어에서 받지 않습니다. 설치 파일도 없습니다.
+        <b>현장대장에서 보내드린 링크</b>로 접속해서 <b>앱 설치</b> 버튼만 누르면 끝입니다.
+        휴대폰 홈 화면에 아이콘이 생기고, 그다음부터는 일반 앱처럼 아이콘을 눌러 쓰시면 됩니다.</p>
+    </div>
+
+    <div class="inst">
+      <div class="inst-c">
+        <div class="inst-h"><span class="os"></span><b>아이폰 · 아이패드</b></div>
+        <p class="must">반드시 <b>사파리</b>로 열어주세요</p>
+        <ol class="inst-s">
+          <li>받으신 링크를 <b>사파리</b>에서 엽니다</li>
+          <li>화면 위쪽 <b>앱 설치</b>를 누릅니다</li>
+          <li>안내를 따라가면 홈 화면에 아이콘이 생깁니다</li>
+        </ol>
+        <p class="warn">크롬이나 카카오톡 안에서 열면 설치 버튼이 동작하지 않습니다.
+          링크를 길게 눌러 복사한 뒤 사파리에 붙여넣어 주세요.</p>
+      </div>
+
+      <div class="inst-c">
+        <div class="inst-h"><span class="os and"></span><b>안드로이드</b></div>
+        <p class="must">반드시 <b>크롬</b>으로 열어주세요</p>
+        <ol class="inst-s">
+          <li>받으신 링크를 <b>크롬</b>에서 엽니다</li>
+          <li>화면 위쪽 <b>앱 설치</b>를 누릅니다</li>
+          <li>설치를 확인하면 홈 화면에 아이콘이 생깁니다</li>
+        </ol>
+        <p class="warn">삼성 인터넷이나 카카오톡 안에서 열면 설치가 안 될 수 있습니다.
+          링크를 복사해 크롬에 붙여넣어 주세요.</p>
+      </div>
+
+      <div class="inst-c">
+        <div class="inst-h"><span class="os pc"></span><b>컴퓨터</b></div>
+        <p class="must">크롬 또는 엣지</p>
+        <ol class="inst-s">
+          <li>받으신 링크를 브라우저에서 엽니다</li>
+          <li>오른쪽 위 <b>앱 설치</b>를 누릅니다</li>
+          <li>바탕화면에 아이콘이 생깁니다</li>
+        </ol>
+        <p class="warn">설치하지 않고 즐겨찾기에 넣어 쓰셔도 똑같이 동작합니다.</p>
+      </div>
+    </div>
+
+    <div class="btn-where">
+      <p class="bw-t">앱 설치 버튼은 여기 있습니다</p>
+      <div class="bw-row">
+        <div><span class="bw-k">휴대폰</span>
+          <img src="/img/guide/install-mobile.jpg" alt="휴대폰 앱 설치 버튼 위치" loading="lazy"></div>
+        <div><span class="bw-k">컴퓨터</span>
+          <img src="/img/guide/install-pc.jpg" alt="컴퓨터 앱 설치 버튼 위치" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="tip"><b>설치하면 뭐가 좋아지나요.</b>
+      주소창 없이 화면을 넓게 쓰고, 매번 링크를 찾지 않아도 됩니다.
+      무엇보다 <b>알림을 받을 수 있습니다.</b> 자재 요청이 올라오거나 경비 정산이 끝나면
+      휴대폰으로 바로 알려줍니다.</div>
+  </div>
+</section>
 
 <!-- ═══════════ 대표님 ═══════════ -->
 <section id="owner">
@@ -288,7 +377,7 @@ footer a{color:var(--ink2);font-weight:600;margin-right:16px}
     </div>
 
     <div class="tip"><b>PC로 보시면 더 편합니다.</b>
-      사무실에서는 컴퓨터 브라우저로 <b>app.fieldboss.co.kr</b> 에 접속하시면
+      사무실에서는 컴퓨터 브라우저로 <b>현장대장에서 보내준 링크</b>로 접속하시면
       왼쪽 메뉴와 넓은 화면으로 같은 내용을 보실 수 있습니다. 현장에서는 휴대폰, 사무실에서는 PC로 쓰시면 됩니다.</div>
 
     <div class="shot-pc"><div class="bar"><i></i><i></i><i></i></div>
@@ -359,7 +448,7 @@ footer a{color:var(--ink2);font-weight:600;margin-right:16px}
           <div class="step"><span class="k">날짜 누르기</span><p>달력에서 날짜를 눌러 출근을 기록합니다.</p></div>
           <div class="step"><span class="k">연장근로</span><p>야근한 날은 시간을 같이 넣습니다. 달력에 <b>+2h</b> 처럼 표시됩니다.</p></div>
           <div class="step"><span class="k">내 경비 정산</span><p>내 카드로 쓴 자재비·주유비를 영수증 찍어 올립니다.
-            대표님이 승인하면 알림이 옵니다.</p></div>
+            대표님이 정산 완료하면 알림이 옵니다.</p></div>
           <div class="step"><span class="k">팀원 명단</span><p>같이 일하는 사람 이름과 연락처를 봅니다.</p></div>
         </div>
       </div>
