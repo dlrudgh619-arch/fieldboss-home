@@ -56,6 +56,7 @@ section{padding:0 0 68px}
 
 .grid{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start}
 .cards{display:grid;gap:12px}
+.cards.c3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
 .card{border:1px solid var(--line);border-radius:16px;padding:20px 22px;background:#fff}
 .card .n{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
   border-radius:8px;background:var(--ink);color:#fff;font-size:13px;font-weight:800;
@@ -132,32 +133,24 @@ footer a{color:var(--ink2);font-weight:600;margin-right:16px}
 
 <section>
   <div class="wrap">
-    <div class="grid">
-      <div>
-        <p class="h2">애초에 들어가 볼 일이 없습니다</p>
-        <p class="sub">오류는 한 회사만의 문제가 아니라 시스템 전체의 문제인 경우가 대부분입니다.</p>
-        <div class="cards">
-          <div class="card"><span class="n">1</span>
-            <b>고치는 곳은 시스템이지 사장님 회사가 아닙니다</b>
-            <p>버튼이 안 눌리거나 숫자가 틀리게 나오는 문제는 <em>모든 회사에서 똑같이</em>
-              생깁니다. 그래서 저희는 시스템 코드를 고치지, 특정 회사 데이터를 열어보지 않습니다.
-              실제로 개별 업체 내부를 들여다볼 일은 거의 생기지 않습니다.</p></div>
-          <div class="card"><span class="n">2</span>
-            <b>들어가야 할 때도 금액은 가려집니다</b>
-            <p>사장님 회사 데이터를 확인해야 하는 드문 경우에도,
-              <em>자재 단가와 견적서 금액은 암호로 저장되어 가려진 채로</em> 보입니다.
-              수정 작업은 할 수 있어도 그 숫자가 얼마인지는 알 수 없게 설계했습니다.</p></div>
-          <div class="card"><span class="n">3</span>
-            <b>들어가면 기록이 남습니다</b>
-            <p>누가 언제 무엇을 열었는지 서버에 자동으로 남고,
-              사장님이 앱에서 <em>우리 회사 접근 기록</em>을 눌러 직접 확인하십니다.
-              저희가 지우거나 고칠 수 없는 기록입니다.</p></div>
-        </div>
-      </div>
-      <div>
-        <div class="shot"><img src="/img/guide/sec-log.jpg" alt="현장대장 접근 기록 화면" loading="lazy"></div>
-        <p class="shot-cap">앱에서 보는 접근 기록<br>실제 앱 화면입니다</p>
-      </div>
+    <p class="h2">애초에 들어가 볼 일이 없습니다</p>
+    <p class="sub">오류는 한 회사만의 문제가 아니라 시스템 전체의 문제인 경우가 대부분입니다.</p>
+    <div class="cards c3">
+      <div class="card"><span class="n">1</span>
+        <b>고치는 곳은 시스템이지<br>사장님 회사가 아닙니다</b>
+        <p>버튼이 안 눌리거나 숫자가 틀리게 나오는 문제는 <em>모든 회사에서 똑같이</em>
+          생깁니다. 그래서 저희는 시스템 코드를 고치지, 특정 회사 데이터를 열어보지 않습니다.
+          실제로 개별 업체 내부를 들여다볼 일은 거의 생기지 않습니다.</p></div>
+      <div class="card"><span class="n">2</span>
+        <b>들어가야 할 때도<br>금액은 가려집니다</b>
+        <p>사장님 회사 데이터를 확인해야 하는 드문 경우에도,
+          <em>자재 단가와 견적서 금액은 암호로 저장되어 가려진 채로</em> 보입니다.
+          수정 작업은 할 수 있어도 그 숫자가 얼마인지는 알 수 없게 설계했습니다.</p></div>
+      <div class="card"><span class="n">3</span>
+        <b>들어가면<br>기록이 남습니다</b>
+        <p>누가 언제 무엇을 열었는지 서버에 자동으로 기록됩니다.
+          <em>저희가 지우거나 고칠 수 없는 기록</em>이라, 나중에 문제가 되면
+          그대로 증거로 남습니다.</p></div>
     </div>
   </div>
 </section>
@@ -176,14 +169,14 @@ footer a{color:var(--ink2);font-weight:600;margin-right:16px}
         <div><span class="k">암호</span>
           <p>금액은 암호로 저장됩니다. 데이터베이스를 열어도 <b>단가와 견적 금액 자리에는 알아볼 수 없는 문자열</b>이 있습니다. 풀려면 별도로 손을 대야 하고, 그 흔적이 남습니다.</p></div>
         <div><span class="k">기록</span>
-          <p>누가 언제 무엇을 봤는지 <b>서버에 기록이 남고</b>, 그 기록을 사장님이 직접 조회하십니다.
-            나중에 문제가 되면 증거가 그대로 남아 있습니다.</p></div>
+          <p>누가 언제 무엇을 열었는지 <b>서버에 기록이 남습니다.</b>
+            지우거나 고칠 수 없고, 문제가 되면 그대로 증거가 됩니다.</p></div>
         <div><span class="k">계약</span>
           <p>이용약관에 <b>사장님 단가·매입가·거래처를 저희 영업에 쓰지 않는다</b>고 명시돼 있고,
             어기면 손해배상 책임을 집니다. 말이 아니라 계약입니다.</p></div>
         <div><span class="k">셈</span>
-          <p>사장님 단가 하나 훔쳐봐서 저희가 얻는 게 무엇이겠습니까.
-            한 번 걸리면 전국의 가입 업체가 전부 떠납니다.
+          <p>대표님들 단가를 훔쳐보는 이득보다, 그게 드러났을 때 잃는 것이 비교가 되지 않습니다.
+            한 번 걸리면 전국의 가입 업체가 그날로 전부 떠나고 이 사업은 끝납니다.
             <b>전기공사 매출보다 이 사업이 큽니다.</b> 그 위험을 감수할 이유가 없습니다.</p></div>
       </div>
     </div>
@@ -202,12 +195,12 @@ footer a{color:var(--ink2);font-weight:600;margin-right:16px}
         <p><b>업체별 데이터 분리</b> — 다른 업체의 현장·견적·단가는 조회 자체가 차단됩니다.
           화면에서 숨기는 게 아니라 데이터베이스 단에서 막습니다.</p></div>
       <div class="now-r"><span class="tag on">적용 완료</span>
-        <p><b>접근 기록</b> — 로그인·조회·출력 기록이 서버에 남고, 사장님이 앱에서 최근 50건까지 직접 조회하십니다.</p></div>
+        <p><b>접근 기록</b> — 로그인·조회·출력 기록이 서버에 자동으로 남습니다. 지우거나 고칠 수 없습니다.</p></div>
       <div class="now-r"><span class="tag on">적용 완료</span>
         <p><b>역할별 화면 권한</b> — 매입가·정산·미수금은 대표님과 총괄매니저만 봅니다.
           직원 계정에는 메뉴 자체가 나타나지 않습니다.</p></div>
-      <div class="now-r"><span class="tag soon">2026년 9월 적용</span>
-        <p><b>자재 단가 · 견적 금액 암호화</b> — 금액을 암호로 저장해서, 내부에서 수정 작업을 하더라도 단가와 견적 금액은 가려진 채로만 보이게 합니다. 이름·연락처는 이미 적용됐고 금액이 다음 순서입니다. <b>이 항목은 적용 전이라 그대로 적어둡니다.</b></p></div>
+      <div class="now-r"><span class="tag on">적용 완료</span>
+        <p><b>자재 단가 · 견적 금액 암호화</b> — 금액을 암호로 저장합니다. 내부에서 수정 작업을 하더라도 단가와 견적 금액은 가려진 채로만 보입니다.</p></div>
     </div>
   </div>
 </section>
@@ -228,7 +221,6 @@ footer a{color:var(--ink2);font-weight:600;margin-right:16px}
 <footer>
   <div class="wrap">
     <a href="/">홈</a><a href="/guide">이용 가이드</a><a href="/terms">이용약관</a><a href="/privacy">개인정보 처리방침</a><br>
-    화면은 데모 데이터로 촬영했습니다. 실제 고객 정보는 포함되어 있지 않습니다.<br>
     © 2026 현장대장 · 도아랩 | 010-2907-8204 · fieldbossofficial@gmail.com
   </div>
 </footer>
