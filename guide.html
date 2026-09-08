@@ -115,28 +115,13 @@ tr:last-child td{border-bottom:none}
 
 
 /* ── 앱 설치 ── */
-.inst{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.inst-c{border:1px solid var(--line);border-radius:16px;padding:24px 22px;background:#fff}
-.inst-h{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:700;letter-spacing:-.03em}
-.os{width:26px;height:26px;border-radius:8px;background:var(--ink);flex-shrink:0}
-.os.and{background:var(--green)} .os.pc{background:var(--blue)}
-.must{margin-top:14px;font-size:14px;font-weight:700;color:var(--blue-d);
-  background:var(--blue-s);border-radius:9px;padding:9px 13px;display:inline-block}
-.inst-s{margin:16px 0 0 0;padding-left:0;list-style:none;counter-reset:i;display:grid;gap:9px}
-.inst-s li{counter-increment:i;position:relative;padding-left:30px;font-size:15px;color:var(--ink2)}
-.inst-s li::before{content:counter(i);position:absolute;left:0;top:2px;width:21px;height:21px;
-  border-radius:6px;background:var(--bg3);color:var(--ink);font-size:12px;font-weight:800;
-  display:grid;place-items:center}
-.inst-s b{color:var(--ink);font-weight:700}
-.warn{margin-top:14px;font-size:13.5px;color:var(--gray);line-height:1.65;word-break:keep-all}
-.btn-where{margin-top:26px;background:var(--bg2);border:1px solid var(--line);
-  border-radius:16px;padding:22px}
-.bw-t{font-size:15px;font-weight:700;margin-bottom:14px}
-.bw-d{font-size:13.5px;color:var(--gray);margin:-8px 0 16px}
+.btn-where{margin-top:4px}
+.bw-t{font-size:19px;font-weight:800;letter-spacing:-.03em;margin-bottom:8px}
+.bw-d{font-size:14.5px;color:var(--ink2);margin:0 0 20px}
 .bw-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
 .bw-row a{display:block}
 @media(max-width:760px){.bw-row{grid-template-columns:1fr}}
-.bw-k{display:block;font-size:12.5px;font-weight:700;color:var(--gray);margin-bottom:7px}
+.bw-k{display:block;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:9px}
 .bw-row img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:10px}
 
 /* ── 팁 ── */
@@ -204,50 +189,9 @@ footer a{color:var(--ink2);font-weight:600;margin-right:16px}
         휴대폰 홈 화면에 아이콘이 생기고, 그다음부터는 일반 앱처럼 아이콘을 눌러 쓰시면 됩니다.</p>
     </div>
 
-    <div class="inst">
-      <div class="inst-c">
-        <div class="inst-h"><span class="os"></span><b>아이폰 · 아이패드</b></div>
-        <p class="must">반드시 <b>사파리</b>로 열어주세요</p>
-        <ol class="inst-s">
-          <li><b>사파리</b>에서 <b>app.fieldboss.co.kr</b>에 접속해 <b>회원가입</b> 후 <b>로그인</b>합니다</li>
-          <li>화면 <b>오른쪽 아래 메뉴</b>를 누릅니다</li>
-          <li><b>공유</b>를 누릅니다</li>
-          <li><b>간략히 보기</b>를 누릅니다</li>
-          <li><b>홈 화면에 추가</b>를 누르면 아이콘이 생깁니다</li>
-        </ol>
-        <p class="warn">아이폰은 <b>앱 설치 버튼이 뜨지 않습니다.</b> 위 순서대로 직접 추가하셔야 합니다.
-          크롬이나 카카오톡 안에서 열면 홈 화면에 추가가 나오지 않으니,
-          링크를 길게 눌러 복사한 뒤 사파리에 붙여넣어 주세요.</p>
-      </div>
-
-      <div class="inst-c">
-        <div class="inst-h"><span class="os and"></span><b>안드로이드</b></div>
-        <p class="must">반드시 <b>크롬</b>으로 열어주세요</p>
-        <ol class="inst-s">
-          <li><b>크롬</b>에서 <b>app.fieldboss.co.kr</b>에 접속해 <b>회원가입</b> 후 <b>로그인</b>합니다</li>
-          <li>화면 <b>오른쪽 위</b>의 <b>앱 설치</b>를 누릅니다</li>
-          <li>안내창에서 <b>설치</b>를 누르면 홈 화면에 아이콘이 생깁니다</li>
-        </ol>
-        <p class="warn">삼성 인터넷이나 카카오톡 안에서 열면 설치가 안 될 수 있습니다.
-          링크를 복사해 크롬에 붙여넣어 주세요.</p>
-      </div>
-
-      <div class="inst-c">
-        <div class="inst-h"><span class="os pc"></span><b>컴퓨터</b></div>
-        <p class="must">반드시 <b>크롬</b>으로 열어주세요</p>
-        <ol class="inst-s">
-          <li><b>크롬</b>에서 <b>app.fieldboss.co.kr</b>에 접속해 <b>회원가입</b> 후 <b>로그인</b>합니다</li>
-          <li>오른쪽 위 <b>앱 설치</b>를 누릅니다</li>
-          <li>안내창에서 <b>설치</b>를 누르면 바탕화면에 아이콘이 생깁니다</li>
-        </ol>
-        <p class="warn">엣지 등 다른 브라우저에서는 설치 버튼이 나오지 않습니다.
-          설치하지 않고 즐겨찾기에 넣어 쓰셔도 똑같이 동작합니다.</p>
-      </div>
-    </div>
-
     <div class="btn-where">
-      <p class="bw-t">그림으로 된 설치 안내</p>
-      <p class="bw-d">아래 그림을 꾹 눌러 저장하시면 직원분께 그대로 보내실 수 있습니다.</p>
+      <p class="bw-t">쓰시는 기기에 맞는 안내를 보세요</p>
+      <p class="bw-d">그림을 누르면 크게 볼 수 있고, 꾹 눌러 저장하시면 직원분께 그대로 보내실 수 있습니다.</p>
       <div class="bw-row">
         <div><span class="bw-k">아이폰 · 아이패드</span>
           <a href="/img/guide/install-ios.png" target="_blank" rel="noopener">
