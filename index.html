@@ -68,9 +68,9 @@
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root{
-  --ink:#191F28; --ink2:#4E5968; --gray:#8B95A1; --line:#E5E8EB;
-  --bg:#FFFFFF; --bg2:#F9FAFB; --bg3:#F2F4F6;
-  --blue:#3182F6; --blue-d:#1B64DA;
+  --ink:#191F28; --ink2:#4E5968; --gray:#8B95A1; --line:#E8E4DE;
+  --bg:#FFFFFF; --bg2:#FAF8F5; --bg3:#F3F0EB;
+  --or:#E85F00; --or-d:#B84B00; --or-s:#FDF0E6; --or-l:#FFF8F2;
   --sans:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic','Segoe UI',sans-serif;
   --wrap:1200px;
 }
@@ -94,8 +94,8 @@ h3{font-size:clamp(19px,1.6vw,22px);font-weight:700;letter-spacing:-.035em;line-
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:16px;letter-spacing:-.02em;padding:16px 28px;border-radius:12px;transition:background .2s,color .2s,border-color .2s,transform .15s;white-space:nowrap}
 .btn-dark{background:var(--ink);color:#fff}
 .btn-dark:hover{background:#000;transform:translateY(-1px)}
-.btn-blue{background:var(--blue);color:#fff}
-.btn-blue:hover{background:var(--blue-d);transform:translateY(-1px)}
+.btn-or{background:var(--or);color:#fff;box-shadow:0 6px 18px rgba(232,95,0,.26)}
+.btn-or:hover{background:var(--or-d);transform:translateY(-1px);box-shadow:0 10px 24px rgba(232,95,0,.32)}
 .btn-line{background:#fff;color:var(--ink);border:1px solid var(--line)}
 .btn-line:hover{border-color:var(--ink);transform:translateY(-1px)}
 
@@ -161,24 +161,24 @@ header.solid .nav-btn:hover{background:#000}
 .feat .lead{margin-top:20px}
 .feat-list{margin-top:26px}
 .feat-list li{list-style:none;display:flex;gap:10px;align-items:flex-start;color:var(--ink2);font-size:15.5px;letter-spacing:-.02em;padding:5px 0;word-break:keep-all}
-.feat-list li::before{content:'';flex-shrink:0;width:5px;height:5px;border-radius:50%;background:var(--blue);margin-top:9px}
+.feat-list li::before{content:'';flex-shrink:0;width:5px;height:5px;border-radius:50%;background:var(--or);margin-top:9px}
 .punch{margin-top:28px;padding-left:18px;border-left:2px solid var(--ink);font-size:clamp(16px,1.8vw,20px);font-weight:700;letter-spacing:-.035em;line-height:1.55;word-break:keep-all}
 .feat-vis{display:flex;justify-content:center;align-items:center}
-.phone-mock{width:min(290px,78%);background:#0B0D10;border-radius:38px;padding:9px;box-shadow:0 44px 84px rgba(20,30,55,.26),0 8px 20px rgba(20,30,55,.10)}
+.phone-mock{width:min(290px,78%);background:#0B0D10;border-radius:38px;padding:9px;box-shadow:0 44px 84px rgba(70,40,10,.26),0 8px 20px rgba(70,40,10,.10)}
 .phone-mock img{border-radius:30px}
 .tilt-l{transform:rotate(-4deg)}
 .tilt-r{transform:rotate(4deg)}
-.pc-mock{width:100%;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 44px 90px rgba(20,30,55,.20)}
+.pc-mock{width:100%;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 44px 90px rgba(70,40,10,.20)}
 .pc-bar{height:34px;background:var(--bg3);display:flex;align-items:center;gap:6px;padding:0 14px}
-.pc-bar i{width:9px;height:9px;border-radius:50%;background:#D4D9DE;display:block}
+.pc-bar i{width:9px;height:9px;border-radius:50%;background:#D8D2C9;display:block}
 
 /* ───────── 3열 카드 ───────── */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,30px)}
 .card .tile{aspect-ratio:4/3;border-radius:20px;position:relative;overflow:hidden;border:1px solid var(--line)}
 .card .tile img{width:100%;height:100%;object-fit:cover;display:block}
-.t1{background:linear-gradient(140deg,#E8F0FE 0%,#F4F1FF 100%)}
-.t2{background:linear-gradient(140deg,#FFF1E9 0%,#FDECF3 100%)}
-.t3{background:linear-gradient(140deg,#E7F6F1 0%,#EDF4FF 100%)}
+.t1{background:linear-gradient(140deg,#FDEEE0 0%,#FFF7F0 100%)}
+.t2{background:linear-gradient(140deg,#FFF3E4 0%,#FDE8CF 100%)}
+.t3{background:linear-gradient(140deg,#F4F0E8 0%,#FBF2E8 100%)}
 .card h3{margin-top:22px}
 .card p{color:var(--gray);font-size:15px;letter-spacing:-.02em;margin-top:8px;line-height:1.65;word-break:keep-all}
 
@@ -186,7 +186,7 @@ header.solid .nav-btn:hover{background:#000}
 .shot{background:var(--bg2)}
 .shot-vis{margin-top:clamp(44px,6vw,72px);position:relative;display:flex;justify-content:center;align-items:flex-end}
 .shot-vis .pc-mock{max-width:880px}
-.shot-vis .phone-mock{width:190px;position:absolute;right:0;bottom:-26px;box-shadow:0 30px 60px rgba(20,30,55,.24)}
+.shot-vis .phone-mock{width:190px;position:absolute;right:0;bottom:-26px;box-shadow:0 30px 60px rgba(70,40,10,.24)}
 .shot-notes{margin-top:clamp(56px,7vw,84px);display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .shot-notes div{border-top:1px solid var(--line);padding-top:20px}
 .shot-notes b{display:block;font-size:16px;font-weight:700;letter-spacing:-.03em}
@@ -204,14 +204,14 @@ header.solid .nav-btn:hover{background:#000}
 /* ───────── 사용법 4단계 ───────── */
 .steps{margin-top:clamp(52px,7vw,80px);display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,2.4vw,32px)}
 .steps div{border-top:2px solid var(--ink);padding-top:22px}
-.steps .n{font-size:14px;font-weight:700;color:var(--blue);letter-spacing:.02em}
+.steps .n{font-size:14px;font-weight:700;color:var(--or);letter-spacing:.02em}
 .steps b{display:block;font-size:18px;font-weight:700;letter-spacing:-.03em;margin-top:10px}
 .steps p{color:var(--gray);font-size:14.5px;margin-top:8px;letter-spacing:-.02em;line-height:1.65;word-break:keep-all}
 
 /* ───────── 요금 ───────── */
 .beta-banner{margin-top:clamp(40px,5vw,56px);background:var(--ink);color:#fff;border-radius:20px;padding:clamp(28px,3.4vw,40px) clamp(26px,3.4vw,44px);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .beta-banner .bb-l{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-.beta-banner .pill{background:var(--blue);color:#fff;font-size:13px;font-weight:700;letter-spacing:-.01em;padding:8px 14px;border-radius:999px;white-space:nowrap}
+.beta-banner .pill{background:var(--or);color:#fff;font-size:13px;font-weight:700;letter-spacing:-.01em;padding:8px 14px;border-radius:999px;white-space:nowrap}
 .beta-banner b{font-size:clamp(18px,2.1vw,25px);font-weight:700;letter-spacing:-.04em;word-break:keep-all}
 .beta-banner p{color:rgba(255,255,255,.62);font-size:14.5px;letter-spacing:-.02em;margin-top:6px;word-break:keep-all}
 
@@ -219,14 +219,14 @@ header.solid .nav-btn:hover{background:#000}
 .plan{margin-top:clamp(24px,2.6vw,32px);display:grid;grid-template-columns:1.3fr 1fr;border:1.5px solid var(--ink);border-radius:20px;overflow:hidden;max-width:940px;margin-left:auto;margin-right:auto}
 .plan-main{padding:clamp(30px,3vw,40px);background:#fff;display:flex;flex-direction:column}
 .plan-add{padding:clamp(30px,3vw,40px);background:var(--bg2);border-left:1px solid var(--line);display:flex;flex-direction:column}
-.plan .tag{font-size:12.5px;font-weight:700;color:var(--blue);letter-spacing:.01em}
+.plan .tag{font-size:12.5px;font-weight:700;color:var(--or);letter-spacing:.01em}
 .plan .amt{margin-top:14px;display:flex;align-items:baseline;gap:5px;flex-wrap:wrap}
 .plan .amt b{font-size:clamp(30px,3.4vw,40px);font-weight:700;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
 .plan .amt span{color:var(--gray);font-size:15px;font-weight:600}
 .plan .vat{color:var(--gray);font-size:13.5px;margin-top:9px;letter-spacing:-.02em;word-break:keep-all}
 .plan ul{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
 .plan li{list-style:none;display:flex;gap:9px;align-items:flex-start;color:var(--ink2);font-size:14.5px;letter-spacing:-.02em;padding:5px 0;word-break:keep-all}
-.plan li::before{content:'';flex-shrink:0;width:14px;height:8px;margin-top:6px;border-left:1.8px solid var(--blue);border-bottom:1.8px solid var(--blue);transform:rotate(-45deg)}
+.plan li::before{content:'';flex-shrink:0;width:14px;height:8px;margin-top:6px;border-left:1.8px solid var(--or);border-bottom:1.8px solid var(--or);transform:rotate(-45deg)}
 .plan .btn{margin-top:28px;width:100%}
 .ex{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
 .ex .ex-t{font-size:13px;font-weight:700;color:var(--gray);letter-spacing:.01em}
@@ -259,14 +259,14 @@ header.solid .nav-btn:hover{background:#000}
 .btn-kakao:hover{background:#F5DC00;transform:translateY(-1px)}
 .btn-kakao svg{width:20px;height:20px;fill:#191600;flex-shrink:0}
 .cta-btns .btn svg{width:20px;height:20px;flex-shrink:0}
-.cta-btns .btn-blue svg{fill:#fff}
+.cta-btns .btn-or svg{fill:#fff}
 .cta-btns .btn-white svg{fill:var(--ink)}
 /* 우측 하단 고정 문의 버튼 */
 .kakao-float{position:fixed;right:22px;bottom:22px;z-index:90;display:flex;align-items:center;gap:9px;
   background:#FEE500;color:#191600;font-weight:700;font-size:15px;letter-spacing:-.02em;
-  padding:14px 20px;border-radius:999px;box-shadow:0 10px 28px rgba(20,30,55,.26),0 2px 6px rgba(20,30,55,.12);
+  padding:14px 20px;border-radius:999px;box-shadow:0 10px 28px rgba(70,40,10,.26),0 2px 6px rgba(70,40,10,.12);
   transition:transform .18s ease, box-shadow .18s ease}
-.kakao-float:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(20,30,55,.32)}
+.kakao-float:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(70,40,10,.32)}
 .kakao-float svg{width:22px;height:22px;fill:#191600;flex-shrink:0}
 @media(max-width:860px){
   .kakao-float{right:16px;bottom:16px;padding:14px;gap:0}
@@ -368,7 +368,7 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
       전기업체 운영에 필요한 기록을 한곳에서 관리하세요.</p>
     </div>
     <div class="hero-cta">
-      <a class="btn btn-blue" href="https://form.naver.com/response/2Gi3koLJ8my" target="_blank" rel="noopener">무료 베타 신청하기</a>
+      <a class="btn btn-or" href="https://form.naver.com/response/2Gi3koLJ8my" target="_blank" rel="noopener">무료 베타 신청하기</a>
       <a class="btn btn-glass" href="/guide">이용 가이드</a>
       <a class="btn btn-glass" href="https://app.fieldboss.co.kr" target="_blank" rel="noopener">앱 다운받기</a>
     </div>
@@ -526,7 +526,7 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
           <p>정식 요금이 시작되기 전에 미리 안내드립니다. 안내를 받으신 뒤에 계속 쓸지 정하시면 되고, 그때까지는 부담 없이 현장에서 써보시면 됩니다.</p>
         </div>
       </div>
-      <a class="btn btn-blue" href="https://form.naver.com/response/2Gi3koLJ8my" target="_blank" rel="noopener">무료 베타 신청</a>
+      <a class="btn btn-or" href="https://form.naver.com/response/2Gi3koLJ8my" target="_blank" rel="noopener">무료 베타 신청</a>
     </div>
 
     <div class="plan rv">
@@ -606,7 +606,7 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
     <h2 class="rv">전기업체 대표님들과 함께<br>현장대장을 만들어가고 있습니다.</h2>
     <p class="lead rv">도아전기에서 실제 사용하며 계속 개선 중입니다.<br>대표님의 피드백을 받아 현장에 맞는 기능부터 반영합니다.</p>
     <div class="cta-btns rv">
-      <a class="btn btn-blue" href="https://form.naver.com/response/2Gi3koLJ8my" target="_blank" rel="noopener">
+      <a class="btn btn-or" href="https://form.naver.com/response/2Gi3koLJ8my" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.55 17.6 4.4 12.45l1.62-1.62 3.53 3.53 8.43-8.43 1.62 1.62z"/></svg>
         무료 베타 신청
       </a>
