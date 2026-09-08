@@ -132,9 +132,12 @@ tr:last-child td{border-bottom:none}
 .btn-where{margin-top:26px;background:var(--bg2);border:1px solid var(--line);
   border-radius:16px;padding:22px}
 .bw-t{font-size:15px;font-weight:700;margin-bottom:14px}
-.bw-row{display:grid;gap:14px}
+.bw-d{font-size:13.5px;color:var(--gray);margin:-8px 0 16px}
+.bw-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+.bw-row a{display:block}
+@media(max-width:760px){.bw-row{grid-template-columns:1fr}}
 .bw-k{display:block;font-size:12.5px;font-weight:700;color:var(--gray);margin-bottom:7px}
-.bw-row img{border:1px solid var(--line);border-radius:10px}
+.bw-row img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:10px}
 
 /* ── 팁 ── */
 .tip{margin-top:26px;padding:20px 22px;border-radius:14px;background:var(--blue-s);
@@ -197,7 +200,7 @@ footer a{color:var(--ink2);font-weight:600;margin-right:16px}
       <span class="badge o">가장 먼저</span>
       <h2>앱 설치하기</h2>
       <p>현장대장은 앱스토어에서 받지 않습니다. 설치 파일도 없습니다.
-        <b>현장대장에서 보내드린 링크</b>로 접속해서 <b>앱 설치</b> 버튼만 누르면 끝입니다.
+        <b>app.fieldboss.co.kr</b>에 접속해 <b>회원가입 후 로그인</b>하고 <b>앱 설치</b> 버튼만 누르면 끝입니다. 다만 <b>아이폰은 앱 설치 버튼이 뜨지 않아</b> 사파리에서 직접 홈 화면에 추가하셔야 합니다.
         휴대폰 홈 화면에 아이콘이 생기고, 그다음부터는 일반 앱처럼 아이콘을 눌러 쓰시면 됩니다.</p>
     </div>
 
@@ -206,11 +209,14 @@ footer a{color:var(--ink2);font-weight:600;margin-right:16px}
         <div class="inst-h"><span class="os"></span><b>아이폰 · 아이패드</b></div>
         <p class="must">반드시 <b>사파리</b>로 열어주세요</p>
         <ol class="inst-s">
-          <li>받으신 링크를 <b>사파리</b>에서 엽니다</li>
-          <li>화면 위쪽 <b>앱 설치</b>를 누릅니다</li>
-          <li>안내를 따라가면 홈 화면에 아이콘이 생깁니다</li>
+          <li><b>사파리</b>에서 <b>app.fieldboss.co.kr</b>에 접속해 <b>회원가입</b> 후 <b>로그인</b>합니다</li>
+          <li>화면 <b>오른쪽 아래 메뉴</b>를 누릅니다</li>
+          <li><b>공유</b>를 누릅니다</li>
+          <li><b>간략히 보기</b>를 누릅니다</li>
+          <li><b>홈 화면에 추가</b>를 누르면 아이콘이 생깁니다</li>
         </ol>
-        <p class="warn">크롬이나 카카오톡 안에서 열면 설치 버튼이 동작하지 않습니다.
+        <p class="warn">아이폰은 <b>앱 설치 버튼이 뜨지 않습니다.</b> 위 순서대로 직접 추가하셔야 합니다.
+          크롬이나 카카오톡 안에서 열면 홈 화면에 추가가 나오지 않으니,
           링크를 길게 눌러 복사한 뒤 사파리에 붙여넣어 주세요.</p>
       </div>
 
@@ -218,9 +224,9 @@ footer a{color:var(--ink2);font-weight:600;margin-right:16px}
         <div class="inst-h"><span class="os and"></span><b>안드로이드</b></div>
         <p class="must">반드시 <b>크롬</b>으로 열어주세요</p>
         <ol class="inst-s">
-          <li>받으신 링크를 <b>크롬</b>에서 엽니다</li>
-          <li>화면 위쪽 <b>앱 설치</b>를 누릅니다</li>
-          <li>설치를 확인하면 홈 화면에 아이콘이 생깁니다</li>
+          <li><b>크롬</b>에서 <b>app.fieldboss.co.kr</b>에 접속해 <b>회원가입</b> 후 <b>로그인</b>합니다</li>
+          <li>화면 <b>오른쪽 위</b>의 <b>앱 설치</b>를 누릅니다</li>
+          <li>안내창에서 <b>설치</b>를 누르면 홈 화면에 아이콘이 생깁니다</li>
         </ol>
         <p class="warn">삼성 인터넷이나 카카오톡 안에서 열면 설치가 안 될 수 있습니다.
           링크를 복사해 크롬에 붙여넣어 주세요.</p>
@@ -228,23 +234,30 @@ footer a{color:var(--ink2);font-weight:600;margin-right:16px}
 
       <div class="inst-c">
         <div class="inst-h"><span class="os pc"></span><b>컴퓨터</b></div>
-        <p class="must">크롬 또는 엣지</p>
+        <p class="must">반드시 <b>크롬</b>으로 열어주세요</p>
         <ol class="inst-s">
-          <li>받으신 링크를 브라우저에서 엽니다</li>
+          <li><b>크롬</b>에서 <b>app.fieldboss.co.kr</b>에 접속해 <b>회원가입</b> 후 <b>로그인</b>합니다</li>
           <li>오른쪽 위 <b>앱 설치</b>를 누릅니다</li>
-          <li>바탕화면에 아이콘이 생깁니다</li>
+          <li>안내창에서 <b>설치</b>를 누르면 바탕화면에 아이콘이 생깁니다</li>
         </ol>
-        <p class="warn">설치하지 않고 즐겨찾기에 넣어 쓰셔도 똑같이 동작합니다.</p>
+        <p class="warn">엣지 등 다른 브라우저에서는 설치 버튼이 나오지 않습니다.
+          설치하지 않고 즐겨찾기에 넣어 쓰셔도 똑같이 동작합니다.</p>
       </div>
     </div>
 
     <div class="btn-where">
-      <p class="bw-t">앱 설치 버튼은 여기 있습니다</p>
+      <p class="bw-t">그림으로 된 설치 안내</p>
+      <p class="bw-d">아래 그림을 꾹 눌러 저장하시면 직원분께 그대로 보내실 수 있습니다.</p>
       <div class="bw-row">
-        <div><span class="bw-k">휴대폰</span>
-          <img src="/img/guide/install-mobile.jpg" alt="휴대폰 앱 설치 버튼 위치" loading="lazy"></div>
+        <div><span class="bw-k">아이폰 · 아이패드</span>
+          <a href="/img/guide/install-ios.png" target="_blank" rel="noopener">
+            <img src="/img/guide/install-ios.png" alt="아이폰 설치 안내" loading="lazy"></a></div>
+        <div><span class="bw-k">안드로이드</span>
+          <a href="/img/guide/install-and.png" target="_blank" rel="noopener">
+            <img src="/img/guide/install-and.png" alt="안드로이드 설치 안내" loading="lazy"></a></div>
         <div><span class="bw-k">컴퓨터</span>
-          <img src="/img/guide/install-pc.jpg" alt="컴퓨터 앱 설치 버튼 위치" loading="lazy"></div>
+          <a href="/img/guide/install-win.png" target="_blank" rel="noopener">
+            <img src="/img/guide/install-win.png" alt="컴퓨터 설치 안내" loading="lazy"></a></div>
       </div>
     </div>
 
