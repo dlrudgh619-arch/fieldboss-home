@@ -136,8 +136,8 @@ header.solid .nav-btn:hover{background:#000}
 .br-m{display:none}
 .hero-sub{margin-top:22px}
 .hero-sub p{color:rgba(255,255,255,.92);font-size:clamp(15px,1.5vw,18px);font-weight:500;letter-spacing:-.02em;line-height:1.7;text-shadow:0 1px 14px rgba(0,0,0,.5);word-break:keep-all}
-.hero-cta{margin-top:32px;display:flex;gap:11px;flex-wrap:wrap}
-.hero-cta .btn{padding:16px 30px}
+.hero-cta{margin-top:32px;display:flex;gap:11px;flex-wrap:wrap;align-items:center}
+.hero-cta .btn{padding:16px 30px;border:1px solid transparent}
 .btn-glass{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(8px)}
 .btn-glass:hover{background:rgba(255,255,255,.24);border-color:#fff;transform:translateY(-1px)}
 .scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;width:22px;height:34px;border:1.5px solid rgba(255,255,255,.55);border-radius:12px}
@@ -318,7 +318,9 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
   .hero-bg::after{background:linear-gradient(to bottom,rgba(8,12,18,.46) 0%,rgba(8,12,18,.10) 16%,rgba(8,12,18,.16) 34%,rgba(8,12,18,.72) 62%,rgba(8,12,18,.92) 100%)}
   .hero-inner{padding-bottom:60px}
   .hero-sub p br{display:none}
-  .hero-cta{margin-top:24px;flex-direction:column;gap:9px}
+  .hero-cta{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .hero-cta .btn{width:100%;padding:15px 10px;font-size:15px}
+  .hero-cta .btn:first-child{grid-column:1 / -1}
   .scroll-cue{display:none}
   .feat{grid-template-columns:1fr;gap:44px}
   .feat.rev .feat-txt{order:0}
@@ -348,7 +350,7 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
     <a href="#features">기능</a><a href="#screens">화면</a><a href="#story">이야기</a><a href="#pricing">요금</a><a href="/security">보안</a><a href="#faq">FAQ</a><a href="#beta">문의</a>
   </nav>
   <div class="nav-right">
-    <a class="login" href="https://hyunjang-daejang.pages.dev">로그인</a>
+    <a class="login" href="https://app.fieldboss.co.kr">로그인</a>
     <a class="nav-btn" href="https://form.naver.com/response/2Gi3koLJ8my" target="_blank" rel="noopener">무료 베타 신청</a>
   </div>
 </div></header>
@@ -367,6 +369,8 @@ footer{background:var(--bg2);padding:clamp(64px,8vh,88px) 0 56px;border-top:1px 
     </div>
     <div class="hero-cta">
       <a class="btn btn-blue" href="https://form.naver.com/response/2Gi3koLJ8my" target="_blank" rel="noopener">무료 베타 신청하기</a>
+      <a class="btn btn-glass" href="/guide">이용 가이드</a>
+      <a class="btn btn-glass" href="https://app.fieldboss.co.kr" target="_blank" rel="noopener">앱 다운받기</a>
     </div>
   </div>
   <div class="scroll-cue"><i></i></div>
